@@ -1,14 +1,16 @@
-n = int(input("\n\tEnter Number : "))
-n1 = 0
-n2 = 1
-i=0
-print(" "+str(n1))
-print(" "+str(n2))
-int(n1)
-int(n2)
-while(i!=n):
+def fibo(n,n1,n2):
+    if n == 0 :
+        return
     n3 = n1 + n2
     n1 = n2
     n2 = n3
-    i=i+1
+    n = n - 1
     print(" "+str(n3))
+    fibo(n,n1,n2)
+    
+n = int(input("\n\tEnter Number : "))
+print(" 0")
+print(" 1")
+fibo(n,0,1)
+
+
