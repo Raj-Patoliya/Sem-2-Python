@@ -1,18 +1,13 @@
 def rev(num):
 	thislist = []
-	count = 0
-	while(num >= 1):
-		count= count + 1
-		mod = num % 10
-		thislist.append(mod)
-		num = num / 10
-	x = len(thislist)
 	revnum = 0
-	for xs in thislist :
-		print(xs * (10^(x-1)) )
-		print(revnum)
-		revnum = revnum + xs * (10^(x-1))  
-		
-num = input("\n\t Enter The Number")
+	while(num >= 1):
+		mod = num % 10
+		revnum = int(revnum * 10 + mod) 	
+		num = num / 10
+	return(revnum)		
 
-rev(num)
+num = input("\n\tEnter The Number")
+x = rev(int(num))
+print("\n\tReversed Value  =  ",x)
+print("\n\tType of Reversed Value = ",type(x))
